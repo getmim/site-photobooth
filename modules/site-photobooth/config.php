@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'site-photobooth',
-    '__version' => '0.0.1',
+    '__version' => '0.1.0',
     '__git' => 'git@github.com:getmim/site-photobooth.git',
     '__license' => 'MIT',
     '__author' => [
@@ -60,6 +60,12 @@ return [
     ],
     'routes' => [
         'site' => [
+            'sitePhotoboothIndex' => [
+                'path' => [
+                    'value' => '/photobooth'
+                ],
+                'handler' => 'SitePhotobooth\\Controller\\Photo::index'
+            ],
             'sitePhotoboothSingle' => [
                 'path' => [
                     'value' => '/photobooth/(:id)',
